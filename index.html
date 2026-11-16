@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFM 客户分群 · CRM 分析</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <h1>🎯 RFM 客户分群分析</h1>
+    <p>Recency × Frequency × Monetary 五分位打分，8 类客群画像与运营建议</p>
+  </header>
+
+  <section class="kpi-row" id="kpiRow"></section>
+
+  <div class="layout">
+    <section class="card">
+      <h2>客群收入贡献</h2>
+      <canvas id="barChart" height="260"></canvas>
+    </section>
+    <section class="card">
+      <h2>R-F 分布散点（点色 = 客群）</h2>
+      <canvas id="scatterChart" height="260"></canvas>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>客群明细与运营策略</h2>
+    <div id="segmentList"></div>
+  </section>
+
+  <section class="card">
+    <h2>客户明细 <small class="muted">（按 RFM 总分排序，点击客群标签可筛选）</small></h2>
+    <div class="filter-row" id="filterRow"></div>
+    <table class="table" id="custTable"></table>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="rfm.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
